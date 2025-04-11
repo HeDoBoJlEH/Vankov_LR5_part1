@@ -13,6 +13,8 @@ bool CanStoi(string& input)
     try
     {
         int number = stoi(input);
+        if (number <= 0) return false;
+        if (to_string(number) != input) return false;
     }
     catch (...) { return false; }
 
